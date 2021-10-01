@@ -23,6 +23,6 @@ Here is a list of things you can contribute by making pull requests on this repo
 **Things not to do whilst creating a Pull Request**
 - Spam Pull Requests will not be accepted. Spam includes making small changes on README.md and other files. _You need to make a legit pull request in order for it to be accepted!_
 - Make only one pull request per Language, Multiple programs on the same languages by the same person will not be accepted!
-- Pre-Existing programs can be refactored and made a pull request but if a program already exists in the repo, donot make another pull request for the same program.
+- Pre-Existing programs can be refactored and made a pull request but if a program already exists in the repo, don't make another pull request for the same program.
 
 ## Best wishes!!!
