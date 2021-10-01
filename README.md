@@ -11,9 +11,13 @@ In this repository you can create 4 Pull Requests to any of the following langua
 Here is a list of things you can contribute by making pull requests on this repository.
 
 Here is a list of things you can contribute by making pull requests on this repository.
-- Python Basic Programs (Contains all it's modules, folders will be specified for each module)
-- JavaScript Basic Programs (Contains all it's frameworks, folders will be specified for each framework!)
-- C/C++ Basic Programs
+- Python Basic Programs
+- JavaScript Basic Programs 
+- C/C++/C# Basic Programs
+- Dart Basic Programs
+- Java Basic Programs
+- PHP Basic Programs
+- Ruby Basic Programs
 - Any Programming Language you know (Listed under `Other Languages`)
 
 **Things not to do whilst creating a Pull Request**
@@ -21,4 +25,4 @@ Here is a list of things you can contribute by making pull requests on this repo
 - Make only one pull request per Language, Multiple programs on the same languages by the same person will not be accepted!
 - Pre-Existing programs can be refactored and made a pull request but if a program already exists in the repo, donot make another pull request for the same program.
 
-Happy Open Source!
+## Best wishes!!!
