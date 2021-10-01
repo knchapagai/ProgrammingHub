@@ -19,12 +19,12 @@ void main()
  do
  {
         printf("\n***MAIN MENU*");
-        printf("\n 1. Insert an element");
-        printf("\n 2. Delete an element");
+        printf("\n 1. Insert the element");
+        printf("\n 2. Delete the element");
         printf("\n 3. PEEK");
-        printf("\n 4. Display the queue");
+        printf("\n 4. Display  queue");
         printf("\n 5. EXIT");
-        printf("\n Enter your option");
+        printf("\n Enter the option");
         scanf("%d",&option);
 
         switch(option)
@@ -50,7 +50,7 @@ void main()
                val=peek();
            
                if(val!=-1)
-               printf("\n The first value in queue is : %d",val);
+               printf("\n The first value in queue is: %d",val);
                break;
 
            case 4:
@@ -71,7 +71,7 @@ void insert()
 {
 
    int num;
-   printf("\n Enter the number to be inserted in queue :");
+   printf("\n Enter the number to inserted in queue :");
    scanf("%d",&num);
   
    if(rear==(MAX-1))
