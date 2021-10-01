@@ -27,13 +27,13 @@ int main()
 
     int result, count;
 
-    printf("Enter data into the list\n");
+    printf("Enter data into  list\n");
 
     create(&p);
 
     tocircular(&p);
 
-    printf("Circular list generated\n");
+    printf("Circular list is generated\n");
 
     display(p);
 
@@ -59,7 +59,6 @@ void tocircular(struct node **p)
 
     rear->next = *p;
 
-    //After this the singly linked list is now circular/
 }
 
 void create(struct node **head)
