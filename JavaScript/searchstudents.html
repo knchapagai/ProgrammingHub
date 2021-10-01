@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <title>Search Student</title>
+<head>
+        <style>
+            .sts{
+                padding: 0.75rem;
+                border:0.05rem solid white;
+                width: 13rem;
+                
+                display:none;
+                cursor: pointer
+            }
+            .sts:hover{
+            background-color: #ddd
+        }
+            #search{
+            padding: 0.5rem;
+            border: 0.05rem solid #ddd;
+            outline: 0.05rem solid #ddd;
+            margin-bottom: 0.25rem;
+            width: 15rem
+        }
+          </style>
+    </head>
+    <body>
+        <h1>Sarswati Higher School</h1>
+        <h2>Nominate class Representative</h2>
+        <label for="search">Find  Student</label><br>
+        <input type= "text" id= "search" placeholder= "Enter the partinal name to search.....">
+        <div class="sts">Apsara Budhathoki</div>
+        <div class="sts">Nishant Banjade</div>
+        <div class="sts">Bishnu Thapa</div>
+        <div class="sts">Monika Rai</div>
+        <div class="sts">Riya Bhandari</div>
+        <div class="sts">priya Tammange</div>
+        <div class="sts">paru kattel</div>
+        <div class="sts">Dikshya sunuwar</div>
+        <div class="sts">Mandira Budhathoki</div>
+        <div class="sts">Bikram Budha</div>
+        <div class="sts">Apsana bhuju</div>
+        <div class="sts">Nisha Banjade</div>
+        <div class="sts">tulsa sth</div>
+        <div class="sts">swraoop Basnet</div>
+        <div class="sts">vivan Adhikari</div>
+        <div class="sts">Rajeeb sunuwar</div>
+        <div class="sts">Kellye Roll</div>
+        <div class="sts">Inez Campions</div>
+        <div class="sts">Jessi Btres</div>
+        <div class="sts">Korey Roll</div>  <script>
+              let sts = document.getElementsByClassName("sts");
+           let search =document.getElementById("search");
+             for(let i =0; i < sts.length; i++){
+                 sts[i].addEventListener("click",stsClick);
+             }
+             function stsClick(event){
+               search.value = event.target.innerText;
+               //when user click in respective area it will appear on the task bar and other element will diapear
+               for(let i =0 ;i < sts.length; i++){
+               sts[i].style.display="none";
+             }
+             }
+            search.addEventListener("keyup",function(){
+            for(let i=0; i< sts.length; i++){
+              //upper & lower is used to find bothnthe cases
+                let name = sts[i].innerText.toUpperCase();
+               if(name.includes(search.value.toUpperCase())
+                 &&search.value !=""){
+                   sts[i].style.display = "block";
+               } else {
+                   sts[i].style.display = "none";
+               }
+               }
+                 });
+           
+        </script>
+    </body>
+</html>
