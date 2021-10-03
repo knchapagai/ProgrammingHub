@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
-
-#
-# Author: Abhishek Shingane (abhisheks@iitbhilai.ac.in)
-# Date: 11 Sep 2020
-#
-
 if ! [ -x "$(command -v jq)" ]; then
   echo 'Error: jq is not installed. Install via https://stedolan.github.io/jq/download/'
   exit 1
