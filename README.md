@@ -1,5 +1,5 @@
 # ProgrammingHub
-## Please add programs in your preferred languages, let's contribute to the open source.
+## Please add HIGH QUALITY programs in your preferred languages,
 
 
 In this repository you can create 4 Pull Requests to any of the following languages you know to contribute to open source and get rewards in return.
