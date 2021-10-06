@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Book list Assignment
+    </title>
+    <style>
+        * {
+            margin: 0;
+           
+        }
+
+        body {
+            background-color: burlywood;
+            height: 100vh;
+        
+            font-family: cursive;
+            text-decoration: green;
+            font-size: larger;
+            max-height: fit-content;
+            color: rgb(99, 49, 2); 
+        }
+
+        .main {
+            height: 100vh;
+            display: flex;
+            background-color: burlywood;
+
+        }
+
+        .main__left,
+        .main__right {
+            flex: 1;
+            border-right: 1px solid black;
+        }
+        .main__left{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main__left1,
+        .main__left2 {
+            flex: 1;
+            overflow-y: scroll;
+            width: 100%;
+            max-height: max-content;
+      
+            display: grid;
+            place-items: center;
+            border-top: 1px solid black;
+        }
+
+        input {
+            background-color: rgb(252, 170, 63);
+            width: 300px !important;
+        }
+
+        .main__right {
+            overflow-y: scroll;
+            display: grid;
+            place-items: center;
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main__left">
+            <div class="main__left1">
+                <h1>Insert books to database</h1>
+                <div>
+                    Enter Name of book: <input type="text" id="B1" placeholder="Enter Name of book" style="width:100px">
+                </div>
+                <div>
+                    Enter Author of book: <input type="text" id="B2" placeholder="Enter Author name"
+                        style="width:100px">
+                </div>
+                <div>
+                    Enter Price of book: <input type="number" id="B3" placeholder="Enter price of book"
+                        style="width:100px">
+                </div>
+                <div>
+                    Click to add in array: <input type="button" id="B4" value="Insert" onclick="addbook()">
+
+                </div>
+            </div>
+
+
+            <div class="main__left2">
+                <h1>Buy books from database</h1>
+                <div>
+                    Select an Book: &nbsp; <select id="Book_list"></select>
+                </div>
+                <div>
+                    Enter Quantity of books: &nbsp; <input type="number" id="Quantity" placeholder="Enter Quantity"
+                        style="width:100px">
+                </div>
+
+                <div>
+                    Click to add to cart: &nbsp; <input type="button" value="Add" onclick="modify()"
+                        style="width:100px">
+
+                </div>
+                <div>
+                    Click to checkout: &nbsp; <input type="button" value="Get bill" onclick="checkout()"
+                        style="width:100px">
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="main__right">
+
+            <h1>CART</h1>
+            <P id="cost"> </P>
+            <p id="bill"> </p>
+        </div>
+    </div>
+
+
+    <script>
+        var book = [];
+        var index = 0, total = 0;
+        var list = document.getElementById("Book_list");
+        var finalprice = 0;
+        function addbook() {
+            book.push({ value: total++, name: (document.getElementById("B1").value), author: (document.getElementById("B2").value), price: (document.getElementById("B3").value) });
+            update();
+        }
+        function update() {
+            for (index; index < total; index++) {
+                var option = document.createElement("option");
+                option.text = book[index].name + "-" + book[index].author;
+                option.srno = book[index].srno;
+                list.add(option);
+            }
+
+        }
+        function modify() {
+            var amout, chosen_one, cost, Name;
+            amount = parseInt(document.getElementById("Quantity").value);
+            selectedoption = (document.getElementById("Book_list").value);
+            var b = selectedoption.indexOf("-");
+            selectedoption = selectedoption.substring(0, b);
+            var flag = -1;
+            for (i = 0; i <= total; i++) {
+
+                if (book[i].name == selectedoption) {
+                    flag = i;
+                    Name = book[i].name;
+
+                    cost = book[i].price * amount;
+                    break;
+                }
+            }
+            if (flag == -1) {
+                name = "Fruit Not Available";
+                cost = 000;
+
+            }
+            finalprice = finalprice + cost;
+            var P = document.getElementById("cost");
+            P.innerHTML = P.innerHTML + " <br/> Book Name = " + Name + " <br/> Price = " + cost + "";
+
+        }
+        function checkout() {
+            var P = document.getElementById("bill");
+            P.innerHTML = " <br/> Your final bill amount is  " + finalprice;
+        }
+    </script>
+
+</body>
+
+</html>
