@@ -1,0 +1,66 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void prims(int mat[][5],vector<int>&v,vector<bool>&visit)
+{
+    int min = 9999;
+    int dest,src;
+    for(auto &i:v)
+    {
+        //cout<<i;
+        for(int j=0;j<5;j++)
+        {
+            if(mat[i][j]!=0 &&!visit[j])
+            {
+                if(min>mat[i][j])
+                {
+                    min = mat[i][j];
+                    dest =j;
+                    src =i;
+                }
+            }
+        }
+    }
+    
+    
+    //cout<<"src: "<<src<<" dest: "<<dest<<" cost: "<<min;
+    int i;
+    for(i=0;i<5;i++)
+    {
+        if(visit[i] == true)
+        continue;
+        else
+        break;
+    }
+    if(i>=5) return;
+    cout<<"src: "<<src<<" dest: "<<dest<<" cost: "<<mat[src][dest];
+    v.push_back(dest);
+    visit[dest]  = true;
+    cout<<"\n";
+    
+    prims(mat,v,visit);
+    
+}
+
+int main()
+{
+   int mat[5][5] = { { 0, 2, 0, 6, 0 },  
+                        { 2, 0, 3, 8, 5 },  
+                        { 0, 3, 0, 0, 7 },  
+                        { 6, 8, 0, 0, 9 },  
+                        { 0, 5, 7, 9, 0 } };
+   for(int i=0;i<5;i++)
+   {
+       for(int j=0;j<5;j++)
+       cout<<mat[i][j]<<" ";
+       cout<<"\n";
+   }
+   
+   vector<int>v;
+   vector<bool>visit(5,false);
+   v.push_back(0);
+   visit[0] = true;
+   
+   prims(mat,v,visit);
+}
