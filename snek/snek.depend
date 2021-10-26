@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1598523400 source:c:\users\bishal\documents\snek\main.cpp
+	<iostream>
+	"snake.h"
+	"food.h"
+	<conio.h>
+
+1598343294 c:\users\bishal\documents\snek\include\snake.h
+	<windows.h>
+
+1598523275 source:c:\users\bishal\documents\snek\src\snake.cpp
+	"snake.h"
+	"food.h"
+
+1598459995 source:c:\users\bishal\documents\snek\src\food.cpp
+	"food.h"
+
+1598342165 c:\users\bishal\documents\snek\include\food.h
+	<windows.h>
+	<time.h>
+	<stdlib.h>
+
