@@ -4,7 +4,7 @@ Stores collection of items. Different types is accepted.
 Indexed from 0.
 
 */
-var fruits=["apple","mango","kiwi",10];
+var fruits=["apple","mango","kiwi",10,20, 30];
   
   //popular methods on List 
   fruits.add("Watermelon");  
