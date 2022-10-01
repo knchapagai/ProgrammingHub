@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# program to run while loop
 mysql -BNe 'show databases' | while read DB
 do
   db-backed-up-recently $DB
