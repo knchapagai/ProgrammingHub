@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    int a[1000];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+int cnt1=0;
+int cnt0=0;
+int cnt2=0;
+    for(int i=0;i<n;i++){
+        if(a[i]==0){
+            cnt0 ++;
+        }
+        else if(a[i]==1){
+            cnt1++;
+        }
+        else if(a[i]==2){
+            cnt2++;
+        }
+
+    }
+    
+    for(int i=0;i<cnt0;i++){
+        cout<<"0";
+    }
+    for(int i=0;i<cnt1;i++){
+        cout<<"1";
+    }
+    for(int i=0;i<cnt2;i++){
+        cout<<"2";
+    }
+
+}
