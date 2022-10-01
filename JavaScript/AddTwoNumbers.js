@@ -1,4 +1,4 @@
-var numOne = 10;
-var numTwo = 20;
-var sum = numOne+numTwo;
+cosnt numOne = 10;
+const numTwo = 20;
+const sum = numOne+numTwo;
 console.log(sum)
