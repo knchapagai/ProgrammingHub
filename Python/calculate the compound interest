@@ -1,0 +1,23 @@
+
+def compound_interest(principal, rate_of_interest, number, time):  
+   
+    amount = principal * pow((1 + (rate_of_interest/number)), number * time)  
+    ci = amount - principal  
+    
+    return ci  
+  
+ 
+def main_function():  
+  
+    p = float(input("Enter the Principal Amount: "))  
+    r = float(input("Enter the Rate of Interest: "))  
+    n = float(input("Enter the Number of times that interest is compounded per unit t: "))  
+    t = float(input("Enter the Time Period: "))  
+  
+    ci = compound_interest(p, r, n, t)  
+    print()  
+  
+    print("Compound Interest (C.I.): %2f" %ci)  
+      
+  
+main_function()  
