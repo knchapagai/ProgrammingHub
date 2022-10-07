@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Multiplication_Table{
+public static void main(String args[]){
+    Scanner sc=new Scanner(System.in); 
+int num=0; // initializing variable
+System.out.println("Enter the number: "); // Displaying message
+num=sc.nextInt(); // Asking for a data
+for(int i=1; i<=10; i++){  // Loop until i becomes 10
+System.out.println(num+"x"+i+"="+num*i); // Printing multiples
+            }
+        }
+    }
