@@ -6,5 +6,11 @@ scanf("%f",&b);
 printf("Enter the height : ");
 scanf("%f",&h);
 a=0.5*b*h;
-printf("Area is %f",a);
+printf("Area is %f\n",a);
+ if(a>0){
+   printf("THERE IS SOME AREA\n");
+}else
+ {
+   printf("NOT AREA");
+ }
 }
