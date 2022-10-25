@@ -1,0 +1,15 @@
+user=> (println "Hello, world!")
+Hello, world!
+nil
+
+
+
+
+user> "h"
+"h"
+
+user> 100
+100
+
+user> true
+true
