@@ -1,0 +1,33 @@
+//C# program to calculate the total of employee's salary 
+//using the Aggregate() method. 
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Employee
+{
+    int ID;
+    string Name;
+    int Salary;
+    string Department;
+
+    static void Main(string[] args)
+    {
+        int TotalSalary = 0;
+
+        List<Employee> employees = new List<Employee>()
+        {
+             new Employee {ID=101,   Name="Amit  "    , Salary=4000,Department="ABC"},
+             new Employee {ID=102,   Name="Amit  "    , Salary=3000,Department="XYZ"},
+             new Employee {ID=103,   Name="Salman"    , Salary=3000,Department="ABC"},
+             new Employee {ID=104,   Name="Ram   "    , Salary=2000,Department="XYZ"},
+             new Employee {ID=105,   Name="Shyam "    , Salary=7000,Department="ABC"},
+             new Employee {ID=106,   Name="Kishor"    , Salary=5000,Department="XYZ"},
+        };
+
+        TotalSalary=employees.Aggregate<Employee, int>(0, (sum, e) => sum += e.Salary);
+
+        Console.WriteLine("Total Salary : "+TotalSalary);
+    }
+}
